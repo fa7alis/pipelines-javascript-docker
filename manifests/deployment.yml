@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: faalispipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: faalispipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: faalispipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: faalispipelinesjavascriptdocker 
+          image: fatalisregistry.azurecr.io/faalispipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
